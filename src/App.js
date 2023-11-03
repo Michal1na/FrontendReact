@@ -1,14 +1,16 @@
 import React from "react";
 import './App.css';
+import './components/form/Form.css';
 import Header from "./components/header/Header";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import ShowMenu from "./components/menu/Menu";
+
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Home from './pages/Home';
 import Breakfasts from './pages/Breakfasts';
 import Baking from './pages/Baking';
 import MainDishes from './pages/Main-dishes';
 import Sweets from './pages/Sweets';
+import Create from "./components/form/Form";
 
 const theme = createTheme({
     palette: {
@@ -28,7 +30,7 @@ function App() {
 
           <Header/>
              <Router>
-                 <ShowMenu/>
+
                     <Routes>
                         <Route path='/' exact component={Home}/>
                         <Route path='/main-dishes' exact component={MainDishes}/>
@@ -39,6 +41,7 @@ function App() {
                     </Routes>
              </Router>
 
+          <Create/>
       </div>
       </ThemeProvider>
 
