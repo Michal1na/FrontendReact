@@ -3,14 +3,13 @@ import './App.css';
 import './components/form/Form.css';
 import Header from "./components/header/Header";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Home from './pages/Home';
 import Breakfasts from './pages/Breakfasts';
 import Baking from './pages/Baking';
 import MainDishes from './pages/Main-dishes';
 import Sweets from './pages/Sweets';
-import Create from "./components/form/Form";
+import AddRecipePage from "./pages/Form";
 
 const theme = createTheme({
     palette: {
@@ -27,27 +26,27 @@ const theme = createTheme({
 function App() {
   return (
       <ThemeProvider theme={theme}>    <div className="App">
-
-          <Header/>
+{/*Wszystko  do browser router*/}
              <Router>
 
+                 <Header/>
                     <Routes>
-                        <Route path='/' exact component={Home}/>
-                        <Route path='/main-dishes' exact component={MainDishes}/>
-                        <Route path='/breakfasts' exact component={Breakfasts}/>
-                        <Route path='/baking' exact component={Baking}/>
-                        <Route path='/sweets' exact component={Sweets}/>
-
+                        <Route path='/home' element={<Home/>}/>
+                        <Route path='/main-dishes' element={<MainDishes/>}/>
+                        <Route path='/breakfasts' element={<Breakfasts/>}/>
+                        <Route path='/baking' element={<Baking/>}/>
+                        <Route path='/sweets' element={<Sweets/>}/>
+                        <Route path='/addrecipeform' element={<AddRecipePage/>}/>
                     </Routes>
+
+
              </Router>
 
-          <Create/>
+
       </div>
       </ThemeProvider>
 
   );
 }
-
-
 
 export default App;

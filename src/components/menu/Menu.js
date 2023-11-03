@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
-import {Link} from "@mui/material";
+
 import CloseIcon from '@mui/icons-material/Close';
 import MenuIcon from "@mui/icons-material/Menu";
 import {MenuData} from "./MenuData";
 import './Menu.css';
+import {Link} from "react-router-dom";
 
 export default function ShowMenu() {
     const[sidebar, setSidebar] = useState(false);
@@ -18,7 +19,7 @@ export default function ShowMenu() {
          </Link>
      </div>
            <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-               <ul className ='nav-menu-items' onClick={showSidebar}>
+               <ul className ='nav-menu-items' >
                    <li className="navbar-toggle nav-text">
                        <Link to ="#" className ='menu-bars'>
                             <CloseIcon/>

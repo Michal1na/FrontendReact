@@ -7,7 +7,7 @@
   font-family: 'Lato', sans-serif;
 }
 
-.main-dishes, .sweets, .breakfasts, .baking .home {
+.main-dishes, .sweets, .breakfasts, .baking, .home {
   display: flex;
   height: 90vh;
   align-items: center;

@@ -7,7 +7,7 @@ import HomeIcon from '@mui/icons-material/Home';
 
 export const MenuData=[
     {
-        title:'All',
+        title:'All Recipes',
         path:'/home',
         icon: <HomeIcon/>,
         cName: 'nav-text'

@@ -13,7 +13,7 @@ export default function  Header() {
         <AppBar>
             <Toolbar>
                 <ShowMenu/>
-                <Typography variant="h6" sx={{ flexGrow: 10 }}>
+                <Typography variant="h6" sx={{ flexGrow: 10 }} align='center'>
                 <p > My Cook Book </p>
                 </Typography>
                 <IconButton
