@@ -14,15 +14,15 @@ export default function ShowMenu() {
    return(
        <>
      <div className= "navbar nav-text">
-         <Link to="#" className='menu-bars'>
-            <MenuIcon onClick={showSidebar}/>
+         <Link to="#" className='menu-bars' onClick={showSidebar}>
+            <MenuIcon />
          </Link>
      </div>
            <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
                <ul className ='nav-menu-items' >
                    <li className="navbar-toggle nav-text">
-                       <Link to ="#" className ='menu-bars'>
-                            <CloseIcon/>
+                       <Link to ="#" className ='menu-bars' onClick={showSidebar}>
+                            <CloseIcon />
                        </Link>
                    </li>
 
