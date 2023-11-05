@@ -28,7 +28,7 @@ export default function ShowMenu() {
 
                    {MenuData.map((item, index) => {
                        return(
-                           <li key={index} className={item.cName}>
+                           <li key={index} className={item.cName} onClick={showSidebar}>
                                 <Link to={item.path}>
                                     {item.icon}
                                     <span>

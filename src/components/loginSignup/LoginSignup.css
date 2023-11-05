@@ -1,18 +1,6 @@
 .login-form .button, .signup-form .button {
     width: 100%;
 }
-.button {
-    background: #A93C3C;
-    color: #fff;
-    border: 0;
-    padding: 10px;
-    margin: 10px;
-    font-size: medium;
-    border-radius:10px;
-    cursor: pointer;
-
-
-}
 
 .link-btn{
     background: #ffffff;

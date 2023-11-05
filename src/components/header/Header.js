@@ -14,7 +14,7 @@ export default function  Header() {
         <AppBar className="header">
             <Toolbar>
                 <ShowMenu/>
-                <Typography variant="h6" sx={{ flexGrow: 10 }} align='center'>
+                <Typography variant="h4"  sx={{ flexGrow: 10 }} align='center'>
                     <Link to="/home">
                         <p > My Cook Book </p>
                     </Link>
