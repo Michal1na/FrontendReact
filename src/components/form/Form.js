@@ -11,13 +11,13 @@ import React, {useState} from 'react';
         e.preventDefault()
          const recipe ={ title, url, notes, category};
 
-         // fetch('http://localhost:3000/', {
-         //     method:'POST',
-         //     headers: {"Content-Type": "application/json"},
-         //     body: JSON.stringify(recipe)
-         // }).then(()=> {
-         //     console.log('new recipe added')
-         // })
+         fetch('http://localhost:3000/', {
+             method:'POST',
+             headers: {"Content-Type": "application/json"},
+             body: JSON.stringify(recipe)
+         }).then(()=> {
+             console.log('new recipe added')
+         })
 
      }
 
@@ -43,8 +43,8 @@ import React, {useState} from 'react';
                     <option value="sweets">Sweets</option>
                 </select>
 
-                <button className="delete"> Delete </button>
-                <button className="save"> Save </button>
+                <button className="button"> Delete </button>
+                <button className="button"> Save </button>
             </form>
         </div>
     );

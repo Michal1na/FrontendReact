@@ -30,14 +30,18 @@
     box-sizing: content-box;
     display: block;
     font-size: medium;
+    border-radius:10px;
 
 
 }
-.delete, .save {
+.button {
     background: #A93C3C;
     color: #fff;
     border: 0;
     padding: 10px;
     margin: 20px;
     font-size: medium;
+    border-radius:10px;
+    cursor: pointer;
+
 }
