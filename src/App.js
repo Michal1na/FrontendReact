@@ -10,6 +10,8 @@ import Baking from './pages/Baking';
 import MainDishes from './pages/Main-dishes';
 import Sweets from './pages/Sweets';
 import AddRecipePage from "./pages/Form";
+import LoginSignup from "./pages/LoginSignup";
+
 
 const theme = createTheme({
     palette: {
@@ -24,6 +26,8 @@ const theme = createTheme({
 });
 
 function App() {
+
+
   return (
       <ThemeProvider theme={theme}>    <div className="App">
 {/*Wszystko  do browser router*/}
@@ -37,6 +41,7 @@ function App() {
                         <Route path='/baking' element={<Baking/>}/>
                         <Route path='/sweets' element={<Sweets/>}/>
                         <Route path='/addrecipeform' element={<AddRecipePage/>}/>
+                        <Route path='/login' element={<LoginSignup/>}/>
                     </Routes>
 
 
