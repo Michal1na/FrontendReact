@@ -1,0 +1,14 @@
+.recipe-prev {
+    display: block;
+    padding: 20px 10px;
+    margin: 10px 20px;
+    border: 1px solid #ddd;
+    font-size: small;
+    border-radius: 10px;
+    text-align: center;
+}
+.recipe-prev img {
+    display: block;
+    width: 400px;
+    height: 400px;
+}

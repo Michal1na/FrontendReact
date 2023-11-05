@@ -1,6 +1,7 @@
 import React from "react";
 import './App.css';
 import './components/form/Form.css';
+import './components/home/Viewall.css';
 import Header from "./components/header/Header";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';

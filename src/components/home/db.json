@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Makaron",
+    "url": "https://www.jadlonomia.com/?s=makaron",
+    "notes": "dla 4 osób",
+    "category": "main-dishes",
+    "id": 1
+  },
+  {
+    "title": "Ryba",
+    "url": "https://www.jadlonomia.com/przepisy/tofuryba-swiateczna/",
+    "notes": "dla 4 osób",
+    "category": "main-dishes",
+    "id": 2
+  },
+  {
+    "title": "Ciasto",
+    "url": "https://www.jadlonomia.com/przepisy/proste-ciasto-z-truskawkami/",
+    "notes": "dla 4 osób",
+    "category": "sweets",
+    "id": 3
+  },
+  {
+    "title": "Owsianka",
+    "url": "https://www.truetastehunters.com/2014/04/owsianka-na-mleku-sojowym-w.html",
+    "notes": "dla 4 osób",
+    "category": "breakfasts",
+    "id": 4
+  }
+]
