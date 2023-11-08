@@ -1,9 +1,17 @@
 import * as React from 'react';
-import  {useState} from 'react';
+import  {useState, useEffect} from 'react';
 import Popup from "./popup/Popup";
 import ModeIcon from '@mui/icons-material/Mode';
 
-export default function RecipePrev ({recipes}) {
+export default function RecipePrev ({recipessrc}) {
+    
+    const [recipes, setRecipes] = useState([]);
+    const getRecipes = () => {
+        fetch(recipessrc, {mode: 'cors'})
+            .then(res => res.json())
+            .then(recipe => {setRecipes(recipe)})
+    }
+    useEffect(getRecipes, []);
 
     const [isOpen, setIsOpen] = useState(false);
     const togglePopup =(notes) => {
@@ -18,9 +26,13 @@ export default function RecipePrev ({recipes}) {
             headers: {"Content-Type": "application/json"},
         }).then(() => {
             console.log(' recipe deleted')
+            getRecipes();
         })
         togglePopup("Deleted")
     }
+
+
+
 
     return (
         <>
