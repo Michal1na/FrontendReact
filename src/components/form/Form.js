@@ -11,7 +11,7 @@ import React, {useState} from 'react';
         e.preventDefault()
          const recipe ={ title, url, notes, category};
 
-         fetch('http://localhost:3000/', {
+         fetch('http://localhost:3001/recipes/addnew', {
              method:'POST',
              headers: {"Content-Type": "application/json"},
              body: JSON.stringify(recipe)
@@ -19,7 +19,10 @@ import React, {useState} from 'react';
              console.log('new recipe added')
          })
 
+
      }
+
+
 
     return(
         <div className ="create">

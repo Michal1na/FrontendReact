@@ -7,7 +7,8 @@ export default function Home() {
     const [recipes, setRecipes] = useState([]);
     useEffect(() => {
         fetch('http://localhost:3001/recipes/get', {mode: 'cors'})
-            .then(res => res.json()).then(recipe => {setRecipes(recipe)})
+            .then(res => res.json())
+            .then(recipe => {setRecipes(recipe)})
     }, []);
 
     return (

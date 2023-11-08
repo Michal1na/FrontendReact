@@ -12,6 +12,15 @@ export default function RecipePrev ({recipes}) {
     }
     const [message, setMessage] = useState({message:""});
 
+    const handleDelete = (id) => {
+        fetch(`http://localhost:3001/recipes/delete/${id}`, {
+            method: 'DELETE',
+            headers: {"Content-Type": "application/json"},
+        }).then(() => {
+            console.log(' recipe deleted')
+        })
+        togglePopup("Deleted")
+    }
 
     return (
         <>
@@ -27,7 +36,7 @@ export default function RecipePrev ({recipes}) {
 
                 <button className="button" onClick={()=>togglePopup(recipe.notes)} > View notes >> </button>
 
-                <button className="button" onClick={()=>togglePopup("Deleted")} > Delete </button>
+                <button className="button" onClick={()=>handleDelete(recipe.id)} > Delete </button>
                 <button className="button-edit button" onClick={()=>togglePopup("Edit")}>
                     <ModeIcon/>
                 </button>
