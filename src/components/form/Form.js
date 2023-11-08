@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { redirect } from 'react-router-dom';
 
  const AddRecipeForm = () => {
 
@@ -17,6 +18,7 @@ import React, {useState} from 'react';
              body: JSON.stringify(recipe)
          }).then(()=> {
              console.log('new recipe added')
+             window.location= 'http://localhost:3000/home'
          })
 
 
@@ -47,7 +49,7 @@ import React, {useState} from 'react';
                 </select>
 
                 <button className="button"> Delete </button>
-                <button className="button"> Save </button>
+                <button className="button" > Save </button>
             </form>
         </div>
     );
