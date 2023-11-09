@@ -8,7 +8,21 @@ export default function Signup(props)  {
 
     const handleSubmitSignup=(e) => {
         e.preventDefault();
-        console.log(email);
+        console.log({email, name});
+
+        fetch(`http://localhost:3001/users/register`, {
+            method: 'POST',
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({name, email, pass})
+           
+        }).then((response) => {
+            if (response.ok){            
+            console.log('user registered')
+            window.location= 'http://localhost:3000/home'
+            }else {
+                throw new Error("HTTP status " + response.status);
+            }
+        })
     }
 
     return (
@@ -22,6 +36,7 @@ export default function Signup(props)  {
                            placeholder="full name"
                            id="name"
                            name="name"
+                           onChange={(e)=> setName(e.target.value)}
 
                     />
 

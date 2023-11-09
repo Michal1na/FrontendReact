@@ -8,7 +8,25 @@ export default function Login(props)  {
      const handleSubmitLogin=(e) => {
          e.preventDefault();
          console.log(email);
+
+         fetch(`http://localhost:3001/users/login`, {
+            method: 'POST',
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({email, pass})
+           
+        }).then((response) => {
+            if(response.ok) {
+            console.log('user logged')
+            
+            window.location= 'http://localhost:3000/home'
+            } else {
+                throw new Error("HTTP status " + response.status);
+            }
+        })
      }
+
+    
+
 
     return (
         <div className="loginsignupform">
