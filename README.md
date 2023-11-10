@@ -17,7 +17,7 @@ Back-end repository -> https://github.com/Michal1na/api.git
 
 Test log-in:
 <br>
-email: test@test.cpm
+email: test@test.com
 <br>
 password: test123
 
