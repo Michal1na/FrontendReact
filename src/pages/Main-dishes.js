@@ -13,7 +13,7 @@ export default function MainDishes () {
             </div>
 
         <div className='home'>
-            <RecipePrev recipessrc='http://localhost:3001/recipes/main-dishes'/>
+            <RecipePrev recipessrc='/recipes/main-dishes'/>
         </div>
         </>
     );

@@ -7,7 +7,7 @@ export default function RecipePrev({ recipessrc }) {
 
     const [recipes, setRecipes] = useState([]);
     const getRecipes = () => {
-        fetch(recipessrc, { mode: 'cors' })
+        fetch(`${process.env.REACT_APP_API_HOST}${recipessrc}`, { mode: 'cors' })
             .then(res => res.json())
             .then(recipe => { setRecipes(recipe) })
     }
@@ -21,7 +21,7 @@ export default function RecipePrev({ recipessrc }) {
     const [message, setMessage] = useState({ message: "" });
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:3001/recipes/delete/${id}`, {
+        fetch(`${process.env.REACT_APP_API_HOST}/recipes/delete/${id}`, {
             method: 'DELETE',
             headers: { "Content-Type": "application/json" },
         }).then(() => {

@@ -9,7 +9,7 @@ export default function Login(props)  {
          e.preventDefault();
          console.log(email);
 
-         fetch(`http://localhost:3001/users/login`, {
+         fetch(`${process.env.REACT_APP_API_HOST}/users/login`, {
             method: 'POST',
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({email, pass})
@@ -18,7 +18,7 @@ export default function Login(props)  {
             if(response.ok) {
             console.log('user logged')
             
-            window.location= 'http://localhost:3000/home'
+            window.location= '/home'
             } else {
                 throw new Error("HTTP status " + response.status);
             }

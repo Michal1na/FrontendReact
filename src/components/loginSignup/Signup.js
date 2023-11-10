@@ -10,7 +10,7 @@ export default function Signup(props)  {
         e.preventDefault();
         console.log({email, name});
 
-        fetch(`http://localhost:3001/users/register`, {
+        fetch(`/users/register`, {
             method: 'POST',
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({name, email, pass})
@@ -18,7 +18,7 @@ export default function Signup(props)  {
         }).then((response) => {
             if (response.ok){            
             console.log('user registered')
-            window.location= 'http://localhost:3000/home'
+            window.location= '/home'
             }else {
                 throw new Error("HTTP status " + response.status);
             }

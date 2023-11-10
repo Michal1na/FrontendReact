@@ -12,13 +12,13 @@ import { redirect } from 'react-router-dom';
         e.preventDefault()
          const recipe ={ title, url, notes, category};
 
-         fetch('http://localhost:3001/recipes/addnew', {
+         fetch(`${process.env.REACT_APP_API_HOST}/recipes/addnew`, {
              method:'POST',
              headers: {"Content-Type": "application/json"},
              body: JSON.stringify(recipe)
          }).then(()=> {
              console.log('new recipe added')
-             window.location= 'http://localhost:3000/home'
+             window.location= '/home'
          })
 
 

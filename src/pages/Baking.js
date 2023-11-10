@@ -12,7 +12,7 @@ export default function Baking () {
             </div>
 
         <div className='home'>
-            <RecipePrev recipessrc='http://localhost:3001/recipes/baking'/>
+            <RecipePrev recipessrc='/recipes/baking'/>
         </div>
         </>
     );

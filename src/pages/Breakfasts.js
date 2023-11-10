@@ -12,7 +12,7 @@ export default function Breakfasts () {
             </div>
 
         <div className='home'>
-            <RecipePrev recipessrc='http://localhost:3001/recipes/breakfasts'/>
+            <RecipePrev recipessrc='/recipes/breakfasts'/>
         </div>
         </>
     );
