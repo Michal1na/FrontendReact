@@ -9,7 +9,7 @@ Front-end repository: https://github.com/Michal1na/FrontendReact.git
 </h1>
 
 Demo : https://drive.google.com/drive/folders/1qtgZwWSwhuWRf7ktcZfzVZOYbYJpvJTU?usp=drive_link
-<video draggable="false" playsinline="" loop="" class="" hash="jJuRlcB" title="" style="width: 900px; height: 392px;" autoplay=""><source type="video/mp4" src="https://i.imgur.com/jJuRlcB.mp4"></video>
+<img src="https://drive.google.com/uc?id=1JELmPsXbfZLGb-SSvgrSIwS7T_PBu2LV">
 
 ## General info
 My Cook Book app is a project for collecting URLs with recipes from different websites and write notes to each one. It supports categories. 
